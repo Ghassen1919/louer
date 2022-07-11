@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=MaisonRepository::class)
  */
-class Maison 
+class Maison
 {
     /**
      * @ORM\Id
@@ -35,21 +35,29 @@ class Maison
 
     /**
      * @Assert\NotBlank(message=" cin doit etre non vide")
-     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *                 min= 8,
+     *                 max= 8,
+     *                 minMessage="8 chiffres recommandés",
+     *                 maxMessage="8 chiffres recommandés" )
+     * @ORM\Column(type="string", length=8)
      */
     private $cin_loy;
 
     /**
      * @Assert\NotBlank(message=" tel doit etre non vide")
-     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *                 min= 8,
+     *                 max= 8,
+     *                 minMessage="8 chiffres recommandés",
+     *                 maxMessage="8 chiffres recommandés" )
+     * 
+     * @ORM\Column(type="string", length=8)
      */
     private $numerotel;
 
 
-    /**
-     * @ORM\OneToMany(targetEntity=Payement::class, mappedBy="maison")
-     */
-    private $payements;
+    
 
     /**
      *  

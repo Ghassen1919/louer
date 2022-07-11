@@ -6,9 +6,9 @@
 <section class="u-clearfix u-palette-2-base u-section-3" id="carousel_38bf">
     <h1>Edit Maison</h1>
 
-   <center> {{ include('maison/_form.html.twig', {'button_label': 'modifier'}) }}<br>
+    {{ include('maison/_form.html.twig', {'button_label': 'modifier'}) }}<br>
 
-    <button class="btn" style="background-color:gray;border-color: black;color: white"><a href="{{ path('app_maison_index') }}">retourner</a></button></center>
+   <center> <button class="btn" style="background-color:gray;border-color: black;color: white"><a href="{{ path('app_maison_index') }}">retourner</a></button></center>
 
     
 {% endblock %}
