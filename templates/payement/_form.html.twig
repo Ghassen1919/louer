@@ -1,0 +1,9 @@
+{{ form_start(form,{attr:{novalidate:'novalidate'}}) }}
+
+    {{ form_widget(form) }}
+
+    {{ form_errors(form) }}
+    <br>
+    
+    <button class="u-border-2 u-border-black u-border-hover-grey-25 u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-3">{{ button_label|default('enregistrer') }}</button>
+{{ form_end(form) }}

@@ -1,0 +1,14 @@
+{% block stylesheet %}
+<link rel="stylesheet" href={{asset("nicepage.css")}} media="screen">
+<link rel="stylesheet" href={{asset("Accueil.css")}} media="screen">
+{% endblock %}
+    
+    {% block javascript %}
+<script class="u-script" type="text/javascript" src={{asset("jquery.js")}} defer=""></script>
+    <script class="u-script" type="text/javascript" src={{asset("nicepage.js")}} defer=""></script>
+    {% endblock %}
+<form method="post" action="{{ path('app_maison_delete', {'id': maison.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ maison.id) }}">
+    
+    <button class="u-border-2 u-border-palette-2-base u-btn u-btn-round u-button-style u-hover-palette-2-base u-none u-radius-6 u-text-hover-white u-btn-2">SUPPRIMER</button>
+</form>

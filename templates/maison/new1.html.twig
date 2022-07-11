@@ -1,0 +1,13 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Maison{% endblock %}
+
+{% block body %}
+<section class="u-clearfix u-palette-2-base u-section-3" id="carousel_38bf">
+      <div class="u-clearfix u-sheet u-sheet-1">
+      {{ include('payement/_form.html.twig') }}
+						
+						<button class="u-border-2 u-border-black u-border-hover-grey-25 u-btn u-btn-round u-button-style u-hover-white u-none u-radius-50 u-btn-3"><a href="{{ path('app_postcom', {'id': maison.id})}}">retourner</a></button>
+					</div>
+                    </section>
+                    {% endblock %}
